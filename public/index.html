@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NULL DEVS — AI-Native Software Engineering</title>
+  <meta name="description" content="We design and build AI-powered software, custom web apps, and intelligent business systems that help real companies move faster and scale with confidence.">
+  <meta property="og:title" content="NULL DEVS — AI-Native Software Engineering">
+  <meta property="og:description" content="Turn NULL into VALUE. Production-grade software built by engineers who ship.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A0D14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">
+      <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="14" pathLength="100" stroke="#0A0D14" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-dasharray="70 30" transform="rotate(28 20 20)"/>
+        <circle cx="20" cy="20" r="14" pathLength="100" stroke="#1FD1B0" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-dasharray="20 80" transform="rotate(-74 20 20)"/>
+        <path d="M13.5 26.5 L26 14" stroke="#0A0D14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19.5 13.6 L26.4 13.6 L26.4 20.5" stroke="#0A0D14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav-brand">NULL<span>DEVS</span></span>
+    </a>
+    <div class="nav-links" id="nd-navlinks">
+      <a class="nd-link" href="#services">Services</a>
+      <a class="nd-link" href="#process">Process</a>
+      <a class="nd-link" href="#about">About</a>
+      <a class="nd-link" href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nd-theme-toggle" aria-label="Toggle dark mode" id="themeBtn">
+        <svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20.5 14.2A8 8 0 119.8 3.5a6.5 6.5 0 1010.7 10.7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <a href="#contact" class="btn-primary btn-sm">Book a Strategy Call
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 4l4 4-4 4" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button id="nd-burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a class="nd-link" href="#services">Services</a>
+    <a class="nd-link" href="#process">Process</a>
+    <a class="nd-link" href="#about">About</a>
+    <a class="nd-link" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <canvas id="nd-particles"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-grid container">
+    <div class="hero-copy">
+      <div class="badge" data-reveal>
+        <span class="badge-dot"></span>
+        AI-native software engineering
+      </div>
+      <h1 data-reveal data-delay="80">Turn NULL<br>Into <span class="accent-word">VALUE<span class="accent-underline"></span></span>.</h1>
+      <p class="hero-sub" data-reveal data-delay="160">We design and build AI-powered software, custom web apps, and intelligent business systems that help real companies move faster and scale with confidence.</p>
+      <div class="hero-actions" data-reveal data-delay="240">
+        <a href="#contact" class="btn-primary btn-lg">Book a Strategy Call
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 4l4 4-4 4" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#services" class="btn-secondary btn-lg">Explore Services</a>
+      </div>
+      <div class="hero-trust" data-reveal data-delay="320">
+        <span><span class="dot"></span>Production-grade</span>
+        <span class="sep"></span>
+        <span><span class="dot"></span>Enterprise-ready</span>
+        <span class="sep"></span>
+        <span><span class="dot"></span>Engineering-first</span>
+      </div>
+    </div>
+    <div class="hero-visual" data-reveal data-delay="200">
+      <svg class="hero-lines" viewBox="0 0 460 480" fill="none">
+        <g stroke="#1FD1B0" stroke-width="1.4" stroke-dasharray="4 6" opacity=".55" class="anim-dash">
+          <path d="M90 120 L230 200"/><path d="M370 110 L230 200"/>
+          <path d="M120 360 L230 200"/><path d="M360 350 L230 200"/>
+          <path d="M90 120 L120 360"/>
+        </g>
+      </svg>
+      <div class="float-card float-code">{ }</div>
+      <div class="float-card float-ai">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="3" fill="#1FD1B0"/>
+          <circle cx="5" cy="6" r="2" fill="rgba(255,255,255,.7)"/>
+          <circle cx="19" cy="6" r="2" fill="rgba(255,255,255,.7)"/>
+          <circle cx="5" cy="18" r="2" fill="rgba(255,255,255,.7)"/>
+          <circle cx="19" cy="18" r="2" fill="rgba(255,255,255,.7)"/>
+          <path d="M5 6l7 6 7-6M5 18l7-6 7 6" stroke="rgba(255,255,255,.4)" stroke-width="1.1"/>
+        </svg>
+      </div>
+      <div class="hero-dashboard" data-tilt>
+        <div class="dashboard-header">
+          <span class="status-dot"></span>
+          <span class="dashboard-title">System Online</span>
+          <span class="dashboard-version">v2.4.0</span>
+        </div>
+        <div class="dashboard-bars">
+          <div class="bar" style="--h:38%;--delay:0s"></div>
+          <div class="bar" style="--h:62%;--delay:.08s"></div>
+          <div class="bar" style="--h:48%;--delay:.16s"></div>
+          <div class="bar accent" style="--h:82%;--delay:.24s"></div>
+          <div class="bar" style="--h:70%;--delay:.32s"></div>
+          <div class="bar dark-bar" style="--h:94%;--delay:.4s"></div>
+        </div>
+        <div class="dashboard-stats">
+          <div class="stat-box"><div class="stat-label">Uptime</div><div class="stat-val">99.9<span>%</span></div></div>
+          <div class="stat-box"><div class="stat-label">Latency</div><div class="stat-val">42<span>ms</span></div></div>
+        </div>
+      </div>
+      <div class="float-card float-deploy">
+        <span class="deploy-icon"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#1FD1B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><div class="deploy-title">Deploy succeeded</div><div class="deploy-meta">build · 38s</div></div>
+      </div>
+      <div class="float-card float-agent">
+        <div class="agent-cmd">agent.run()</div>
+        <div class="agent-result">3 tasks automated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH MARQUEE -->
+<section class="marquee-section">
+  <div class="marquee-label" data-reveal>Built on a modern, production-grade stack</div>
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      <div class="marquee-set">
+        <span class="tech-pill">React</span><span class="tech-pill">Next.js</span><span class="tech-pill">TypeScript</span>
+        <span class="tech-pill">Node.js</span><span class="tech-pill">Python</span><span class="tech-pill">OpenAI</span>
+        <span class="tech-pill">Claude</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">AWS</span>
+        <span class="tech-pill">Docker</span><span class="tech-pill">Kubernetes</span><span class="tech-pill">Redis</span>
+      </div>
+      <div class="marquee-set" aria-hidden="true">
+        <span class="tech-pill">React</span><span class="tech-pill">Next.js</span><span class="tech-pill">TypeScript</span>
+        <span class="tech-pill">Node.js</span><span class="tech-pill">Python</span><span class="tech-pill">OpenAI</span>
+        <span class="tech-pill">Claude</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">AWS</span>
+        <span class="tech-pill">Docker</span><span class="tech-pill">Kubernetes</span><span class="tech-pill">Redis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <div class="eyebrow">01 · Services</div>
+      <h2>Engineering across the<br>entire software stack.</h2>
+      <p class="section-sub">From your first custom app to a full AI product, we build software that's ready for production and made to grow with you.</p>
+    </div>
+    <div class="services-grid">
+
+      <a href="/services/custom-web-apps" class="svc-card" data-reveal>
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.8"/><circle cx="6" cy="6.5" r="1" fill="#1FD1B0"/><circle cx="9" cy="6.5" r="1" fill="#1FD1B0"/></svg></div>
+        <h3>Custom Web Applications</h3>
+        <p>Fast, dependable applications built for real scale. We architect for the load you'll have in year two, not just the demo.</p>
+        <span class="svc-arrow">Explore <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 4l4 4-4 4" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a href="/services/ai-integration" class="svc-card" data-reveal data-delay="60">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.4" stroke="currentColor" stroke-width="1.8"/><circle cx="5" cy="6" r="1.8" stroke="currentColor" stroke-width="1.8"/><circle cx="19" cy="6" r="1.8" stroke="currentColor" stroke-width="1.8"/><circle cx="19" cy="18" r="1.8" stroke="currentColor" stroke-width="1.8"/><path d="M6.4 7.2 10 10.5M17.6 7.2 14 10.5M17.6 16.8 13.6 13.4" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h3>AI Integration</h3>
+        <p>We bring AI into the tools and workflows your team already relies on — intelligently, not as a gimmick.</p>
+        <span class="svc-arrow">Explore <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 4l4 4-4 4" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a href="/services/ai-products" class="svc-card" data-reveal data-delay="120">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.2 5.4L20 10l-5.8 1.6L12 17l-2.2-5.4L4 10l5.8-1.6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="18.5" cy="18.5" r="1.3" fill="#1FD1B0"/></svg></div>
+        <h3>AI Products</h3>
+        <p>Complete AI products and SaaS platforms from first idea to launch. We own the full loop — design, engineering, deployment.</p>
+        <span class="svc-arrow">Explore <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 4l4 4-4 4" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a href="/services/automation" class="svc-card" data-reveal>
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 3 5 13h6l-1 8 8-10h-6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Automation Systems</h3>
+        <p>We take repetitive busywork off your team with automation you can trust. Reliable, observable, built to handle edge cases.</p>
+        <span class="svc-arrow">Explore <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 4l4 4-4 4" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a href="/services/business-software" class="svc-card" data-reveal data-delay="60">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke="#1FD1B0" stroke-width="1.8"/></svg></div>
+        <h3>Business Software</h3>
+        <p>Internal tools shaped around exactly how your business runs. Built to replace spreadsheets and outdated SaaS.</p>
+        <span class="svc-arrow">Explore <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 4l4 4-4 4" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+      <a href="/services/consulting" class="svc-card" data-reveal data-delay="120">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 20V5M4 20h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 16l3.5-4 3 2.5L20 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="7" r="1.4" fill="#1FD1B0"/></svg></div>
+        <h3>Technical Consulting</h3>
+        <p>Senior engineers on hand for architecture reviews, scaling decisions, and the hard technical calls.</p>
+        <span class="svc-arrow">Explore <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M8 4l4 4-4 4" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section section-dark">
+  <div class="container">
+    <div class="section-header section-header-light" data-reveal>
+      <div class="eyebrow">02 · Process</div>
+      <h2>A clear path from<br>idea to scale.</h2>
+    </div>
+    <div class="process-wrap">
+      <div class="process-line-track"><div class="process-line-fill" id="procLine"></div></div>
+      <div class="process-steps">
+        <div class="process-step" data-reveal><div class="step-num">01</div><h3>Discover</h3><p>We get deep into your goals, users, and blockers. No assumptions, no pre-sold solutions.</p></div>
+        <div class="process-step" data-reveal data-delay="120"><div class="step-num">02</div><h3>Design</h3><p>Architecture that stays stable as you grow — choices grounded in your constraints, not our defaults.</p></div>
+        <div class="process-step" data-reveal data-delay="240"><div class="step-num">03</div><h3>Build</h3><p>Clean, tested, documented code. We build for the developer maintaining it at 2am in year three.</p></div>
+        <div class="process-step" data-reveal data-delay="360"><div class="step-num">04</div><h3>Deploy</h3><p>Zero-downtime releases, monitored rollouts, rollback plans ready. Production launches should be boring.</p></div>
+        <div class="process-step" data-reveal data-delay="480"><div class="step-num active">05</div><h3>Scale</h3><p>We stay on. Support, performance tuning, and feature work as your product grows.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="about-grid">
+      <div data-reveal>
+        <div class="eyebrow">03 · About</div>
+        <h2>Engineers who care<br>about the craft.</h2>
+        <p>NULL DEVS is a small, senior-only engineering team. No offshore pipelines, no junior-dev markup, no project manager layers between you and the people writing your code.</p>
+        <p>We started because we kept watching companies get burned by shops that could sell but couldn't ship. Our answer: a firm built engineering-first, always.</p>
+        <div class="about-values">
+          <div class="about-value"><span class="av-dot"></span><div><strong>Opinionated by default</strong><p>We'll tell you what we think, even when it's not what you want to hear.</p></div></div>
+          <div class="about-value"><span class="av-dot"></span><div><strong>Async-first</strong><p>Decisions are written down. You're never blocked waiting for a call that could have been a message.</p></div></div>
+          <div class="about-value"><span class="av-dot"></span><div><strong>Obsessed with quality</strong><p>Code review culture, real test coverage, performance budgets — not because a PM asked.</p></div></div>
+        </div>
+      </div>
+      <div class="about-visual" data-reveal data-delay="120">
+        <div class="capability-tabs" id="capTabs">
+          <button class="cap-tab active" data-cap="frontend">Frontend</button>
+          <button class="cap-tab" data-cap="backend">Backend</button>
+          <button class="cap-tab" data-cap="ai">AI / ML</button>
+          <button class="cap-tab" data-cap="infra">Infra</button>
+        </div>
+        <div class="cap-panel active" data-panel="frontend">
+          <div class="cap-skills">
+            <div class="skill-bar"><span>React / Next.js</span><div class="bar-track"><div class="bar-fill" style="--w:96%"></div></div></div>
+            <div class="skill-bar"><span>TypeScript</span><div class="bar-track"><div class="bar-fill" style="--w:95%"></div></div></div>
+            <div class="skill-bar"><span>Animations / UX</span><div class="bar-track"><div class="bar-fill" style="--w:90%"></div></div></div>
+            <div class="skill-bar"><span>Performance</span><div class="bar-track"><div class="bar-fill" style="--w:93%"></div></div></div>
+          </div>
+        </div>
+        <div class="cap-panel" data-panel="backend">
+          <div class="cap-skills">
+            <div class="skill-bar"><span>Node.js / Express</span><div class="bar-track"><div class="bar-fill" style="--w:97%"></div></div></div>
+            <div class="skill-bar"><span>Python / FastAPI</span><div class="bar-track"><div class="bar-fill" style="--w:92%"></div></div></div>
+            <div class="skill-bar"><span>PostgreSQL / Redis</span><div class="bar-track"><div class="bar-fill" style="--w:94%"></div></div></div>
+            <div class="skill-bar"><span>REST / GraphQL / gRPC</span><div class="bar-track"><div class="bar-fill" style="--w:89%"></div></div></div>
+          </div>
+        </div>
+        <div class="cap-panel" data-panel="ai">
+          <div class="cap-skills">
+            <div class="skill-bar"><span>OpenAI / Claude APIs</span><div class="bar-track"><div class="bar-fill" style="--w:97%"></div></div></div>
+            <div class="skill-bar"><span>RAG / Embeddings</span><div class="bar-track"><div class="bar-fill" style="--w:91%"></div></div></div>
+            <div class="skill-bar"><span>Fine-tuning</span><div class="bar-track"><div class="bar-fill" style="--w:84%"></div></div></div>
+            <div class="skill-bar"><span>AI Agents / Pipelines</span><div class="bar-track"><div class="bar-fill" style="--w:93%"></div></div></div>
+          </div>
+        </div>
+        <div class="cap-panel" data-panel="infra">
+          <div class="cap-skills">
+            <div class="skill-bar"><span>AWS / GCP</span><div class="bar-track"><div class="bar-fill" style="--w:94%"></div></div></div>
+            <div class="skill-bar"><span>Docker / Kubernetes</span><div class="bar-track"><div class="bar-fill" style="--w:91%"></div></div></div>
+            <div class="skill-bar"><span>CI/CD Pipelines</span><div class="bar-track"><div class="bar-fill" style="--w:96%"></div></div></div>
+            <div class="skill-bar"><span>Observability / APM</span><div class="bar-track"><div class="bar-fill" style="--w:88%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div data-reveal>
+        <div class="eyebrow">04 · Contact</div>
+        <h2>Let's build<br>something real.</h2>
+        <p>Tell us what you're working on. We'll respond within 1 business day — no sales pitch, no NDA required to get started.</p>
+        <div class="contact-info">
+          <a href="mailto:null.point.errors@gmail.com" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 8l8 5 8-5M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" stroke="#1FD1B0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            null.point.errors@gmail.com
+          </a>
+          <div class="contact-social">
+            <a href="https://github.com/nulldevcoders" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="#1FD1B0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              nulldevcoders
+            </a>
+            <a href="https://www.linkedin.com/in/null-pointers-364765417/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="#1FD1B0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="#1FD1B0" stroke-width="1.8"/></svg>
+              NULL POINTERS
+            </a>
+          </div>
+          <div class="contact-availability"><span class="av-dot"></span>Currently accepting new projects</div>
+        </div>
+      </div>
+      <div class="contact-form-wrap" data-reveal data-delay="120">
+        <form id="contactForm" class="contact-form" novalidate>
+          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-row">
+            <div class="field">
+              <label for="fname">Name <span class="req">*</span></label>
+              <input type="text" id="fname" name="name" placeholder="Alex Chen" required autocomplete="name" maxlength="100">
+              <div class="field-error" id="nameErr"></div>
+            </div>
+            <div class="field">
+              <label for="femail">Email <span class="req">*</span></label>
+              <input type="email" id="femail" name="email" placeholder="alex@company.com" required autocomplete="email" maxlength="254">
+              <div class="field-error" id="emailErr"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="fcompany">Company <span class="opt">(optional)</span></label>
+              <input type="text" id="fcompany" name="company" placeholder="Acme Corp" autocomplete="organization" maxlength="120">
+            </div>
+            <div class="field">
+              <label for="fservice">Service</label>
+              <select id="fservice" name="service">
+                <option value="">What do you need?</option>
+                <option value="custom-web-app">Custom Web Application</option>
+                <option value="ai-integration">AI Integration</option>
+                <option value="ai-product">AI Product / SaaS</option>
+                <option value="automation">Automation System</option>
+                <option value="business-software">Business Software</option>
+                <option value="consulting">Technical Consulting</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="fbudget">Your budget</label>
+            <input type="text" id="fbudget" name="budget" placeholder="e.g. $10k, $50k, open to discuss…" maxlength="100">
+          </div>
+          <div class="field">
+            <label for="fmessage">Tell us about your project <span class="req">*</span></label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="What are you building? What's the core problem? What does success look like?" required minlength="20" maxlength="5000"></textarea>
+            <div class="field-error" id="msgErr"></div>
+            <div class="char-count"><span id="charCount">0</span> / 5000</div>
+          </div>
+          <button type="submit" class="btn-primary btn-lg btn-submit" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="spin"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.3)" stroke-width="2.5"/><path d="M12 2a10 10 0 0110 10" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+              Sending…
+            </span>
+          </button>
+          <div class="form-success" id="formSuccess" aria-live="polite">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(31,209,176,.15)"/><path d="M8 12l3 3 5-5" stroke="#1FD1B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>Message sent!</strong><p>We'll be in touch within 1 business day. Check your inbox for a confirmation.</p></div>
+          </div>
+          <div class="form-error-banner" id="formError" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand" style="margin-bottom:12px">NULL<span>DEVS</span></div>
+        <p>AI-native software engineering.<br>We build what others only pitch.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/nulldevcoders" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/null-pointers-364765417/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+          <a href="mailto:null.point.errors@gmail.com" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 8l8 5 8-5M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-label">Services</div>
+        <a href="/services/custom-web-apps">Custom Web Apps</a>
+        <a href="/services/ai-integration">AI Integration</a>
+        <a href="/services/ai-products">AI Products</a>
+        <a href="/services/automation">Automation</a>
+        <a href="/services/business-software">Business Software</a>
+        <a href="/services/consulting">Consulting</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-label">Company</div>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-label">Contact</div>
+        <a href="mailto:null.point.errors@gmail.com">null.point.errors@gmail.com</a>
+        <a href="https://github.com/nulldevcoders" target="_blank" rel="noopener noreferrer">github.com/nulldevcoders</a>
+        <a href="https://www.linkedin.com/in/null-pointers-364765417/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NULL DEVS. All rights reserved.</span>
+      <span class="footer-mono">Engineered, not templated.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
