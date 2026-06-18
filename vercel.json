@@ -8,6 +8,8 @@
     { "source": "/services/automation", "destination": "/public/services/automation.html" },
     { "source": "/services/business-software", "destination": "/public/services/business-software.html" },
     { "source": "/services/consulting", "destination": "/public/services/consulting.html" },
-    { "source": "/(.*)", "destination": "/public/$1" }
+    { "source": "/css/:file", "destination": "/public/css/:file" },
+    { "source": "/js/:file", "destination": "/public/js/:file" },
+    { "source": "/", "destination": "/public/index.html" }
   ]
 }
