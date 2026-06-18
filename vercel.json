@@ -2,14 +2,11 @@
   "version": 2,
   "rewrites": [
     { "source": "/api/contact", "destination": "/api/contact.js" },
-    { "source": "/services/custom-web-apps", "destination": "/public/services/custom-web-apps.html" },
-    { "source": "/services/ai-integration", "destination": "/public/services/ai-integration.html" },
-    { "source": "/services/ai-products", "destination": "/public/services/ai-products.html" },
-    { "source": "/services/automation", "destination": "/public/services/automation.html" },
-    { "source": "/services/business-software", "destination": "/public/services/business-software.html" },
-    { "source": "/services/consulting", "destination": "/public/services/consulting.html" },
-    { "source": "/css/:file", "destination": "/public/css/:file" },
-    { "source": "/js/:file", "destination": "/public/js/:file" },
-    { "source": "/", "destination": "/public/index.html" }
+    { "source": "/services/custom-web-apps", "destination": "/services/custom-web-apps.html" },
+    { "source": "/services/ai-integration", "destination": "/services/ai-integration.html" },
+    { "source": "/services/ai-products", "destination": "/services/ai-products.html" },
+    { "source": "/services/automation", "destination": "/services/automation.html" },
+    { "source": "/services/business-software", "destination": "/services/business-software.html" },
+    { "source": "/services/consulting", "destination": "/services/consulting.html" }
   ]
 }
