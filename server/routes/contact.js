@@ -9,17 +9,15 @@ const { sendContactNotification, sendAutoReply } = require('../utils/email');
 
 const router = express.Router();
 
-// Per-route rate limiter — 5 submissions per IP per hour
 const contactLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
   max:      parseInt(process.env.CONTACT_RATE_LIMIT_MAX || '5', 10),
   standardHeaders: true,
   legacyHeaders:   false,
-  message: { success: false, message: "You've sent too many messages. Please wait an hour and try again." },
+  message: { success: false, message: 'Too many messages. Please wait an hour and try again.' },
   keyGenerator: (req) => req.ip || req.connection.remoteAddress || 'unknown',
 });
 
-// Validation rules
 const contactValidation = [
   body('name')
     .trim()
@@ -55,15 +53,13 @@ const contactValidation = [
     .trim()
     .isLength({ max: 100 }).withMessage('Budget field is too long.'),
 
-  // Honeypot — bots fill this, humans never see it
   body('website')
     .optional({ checkFalsy: true })
     .isEmpty().withMessage('Submission rejected.'),
 ];
 
-// Spam patterns
 const SPAM_PATTERNS = [
-  /\b(viagra|casino|crypto|bitcoin|nft|forex|loan|investment opportunity)\b/i,
+  /\b(viagra|casino|crypto pump|nft mint|forex|loan offer)\b/i,
   /\b(click here|buy now|limited offer|earn money fast)\b/i,
 ];
 
@@ -72,7 +68,6 @@ function detectSpam(fields) {
   return SPAM_PATTERNS.some(re => re.test(combined));
 }
 
-// POST /api/contact
 router.post('/', contactLimiter, contactValidation, async (req, res, next) => {
   try {
     const errors = validationResult(req);
@@ -86,18 +81,16 @@ router.post('/', contactLimiter, contactValidation, async (req, res, next) => {
 
     const { name, email, company, service, budget, message, website } = req.body;
 
-    // Honeypot check
     if (website) {
       logger.warn(`Honeypot triggered from IP ${req.ip}`);
-      return res.json({ success: true, message: "Message received. We'll be in touch soon!" });
+      return res.json({ success: true, message: 'Message received!' });
     }
 
-    // Spam check
     if (detectSpam({ name, email, company: company || '', message })) {
       logger.warn(`Spam detected from ${req.ip}: ${email}`);
       return res.status(422).json({
         success: false,
-        message: 'Your message was flagged as potential spam. Please contact us directly at null.point.errors@gmail.com.',
+        message: 'Your message was flagged. Please contact us directly at null.point.errors@gmail.com',
       });
     }
 

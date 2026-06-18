@@ -2,7 +2,6 @@
   "name": "nulldevs",
   "version": "1.0.0",
   "description": "NULL DEVS - AI-native software engineering agency",
-  "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
     "dev": "node server/index.js"

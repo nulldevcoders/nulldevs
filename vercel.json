@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/contact", "destination": "/api/contact.js" },
+    { "source": "/services/custom-web-apps", "destination": "/public/services/custom-web-apps.html" },
+    { "source": "/services/ai-integration", "destination": "/public/services/ai-integration.html" },
+    { "source": "/services/ai-products", "destination": "/public/services/ai-products.html" },
+    { "source": "/services/automation", "destination": "/public/services/automation.html" },
+    { "source": "/services/business-software", "destination": "/public/services/business-software.html" },
+    { "source": "/services/consulting", "destination": "/public/services/consulting.html" },
+    { "source": "/(.*)", "destination": "/public/$1" }
+  ]
+}
